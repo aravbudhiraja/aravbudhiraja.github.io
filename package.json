@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ZYPetkova20/Historical-Geography-Project.git"
+    "url": "git+https://github.com/ZYPetkova20/.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ZYPetkova20/Historical-Geography-Project/issues"
+    "url": "https://github.com/ZYPetkova20//issues"
   },
-  "homepage": "https://github.com/ZYPetkova20/Historical-Geography-Project#readme",
+  "homepage": "https://github.com/ZYPetkova20/#readme",
   "private": true,
   "devDependencies": {
     "@babel/core": "^7.17.7",
