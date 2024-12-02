@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        * {
+  cursor: default !important;
+}
+::selection {
+      color: white !important;
+    }
+
+    </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../images/newtLogo.png">
-    <link rel="stylesheet" href="../css/page/aboutUs.css">
-    <title>About us</title>
+    <link rel="stylesheet" href="../css/page/america.css">
+    <title>The Church of Panagia Acheiropoietos</title>
     <!--For the custom fonts-->
         <link rel="stylesheet" type="text/css" href="../../src/fonts/style.css"/>
         <link rel="stylesheet" type="text/css" href="../../src/fonts/stylesheet2.css"/>
+    <!--AOS library-->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--Three.js library-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r123/three.min.js"></script>
 </head>
-<body class="about-us-page">
-    <!--Custom cursor-->
-        <div class="cursor">
-            <div class="inner-circle">
-
-            </div>
-        </div>
-    
+<body class="secondary-page america">
+   
+     
     <!--Page transition-->    
         <div class = "transition"></div>
         <div class = "transition two"></div>
@@ -29,43 +36,43 @@
     <!--Feedback pop up window-->
         <div class="popUp-background"></div>
         <div class="popUp-wrapper">
-            <div class="popUp-content">
-                <p id="close-popUp">+</p>
-                <form action="mailto:ZZSpasov20@codingburgas.bg?subject=New feedback" enctype="text/plain" method="post">
-                    <div id="first-form-parth">
-                        <div id="first-form-parth-space">
-                            <div id="form-title-wrapper">
-                                <h4 id="form-title">Write us</h4>
-                            </div>
-                            <div id="hr-div-wrapper">
-                                <div id="hr-div"></div>
-                            </div>
-                            <div class="input-and-label-wrapper">
-                                <input type="text" id="name" name="Name" placeholder="&nbsp;" required>
-                                <label for="Name" class="input-label">Name</label>
-                            </div>
-                            <div class="input-and-label-wrapper">
-                                <input type="text" id="last name" name="Last name" placeholder="&nbsp;" required>
-                                <label for="Last name" class="input-label">Last name</label>
-                            </div>
-                            <div class="input-and-label-wrapper">
-                                <input type="text" id="phone-number" name="Phone number" placeholder="&nbsp;" pattern="[0-9\.]+" minlength="7" maxlength="15">
-                                <label for="Phone number" class="input-label">Phone</label>
-                            </div>
+        <div class="popUp-content">
+            <p id="close-popUp">+</p>
+            <form action="mailto:ZZSpasov20@codingburgas.bg?subject=New feedback" enctype="text/plain" method="post">
+                <div id="first-form-parth">
+                    <div id="first-form-parth-space">
+                        <div id="form-title-wrapper">
+                            <h4 id="form-title">Write us</h4>
+                        </div>
+                        <div id="hr-div-wrapper">
+                            <div id="hr-div"></div>
+                        </div>
+                        <div class="input-and-label-wrapper">
+                            <input type="text" id="name" name="Name" placeholder="&nbsp;" required>
+                            <label for="Name" class="input-label">Name</label>
+                        </div>
+                        <div class="input-and-label-wrapper">
+                            <input type="text" id="last name" name="Last name" placeholder="&nbsp;" required>
+                            <label for="Last name" class="input-label">Last name</label>
+                        </div>
+                        <div class="input-and-label-wrapper">
+                            <input type="text" id="phone-number" name="Phone number" placeholder="&nbsp;" pattern="[0-9\.]+" minlength="7" maxlength="15">
+                            <label for="Phone number" class="input-label">Phone</label>
                         </div>
                     </div>
-                    <div id="second-form-parth">
-                        <label for="Feedback" id="messageLabel">Message</label>
-                        <textarea name="Feedback" id="textarea"   placeholder="Write text here..." required></textarea>
-                        <input type="submit" value="SEND MESSAGE" id="submit-button">
-                    </div>
-                </form>
-            </div>
-        </div>     
+                </div>
+                <div id="second-form-parth">
+                    <label for="Feedback" id="messageLabel">Message</label>
+                    <textarea name="Feedback" id="textarea"   placeholder="Write text here..." required></textarea>
+                    <input type="submit" value="SEND MESSAGE" id="submit-button">
+                </div>
+            </form>
+        </div>
+        </div>
         
     <!--Mini nav-->
         <div id="miniNavWrapper">
-            <a href="../../index.html" class="page-transition">
+            <a href="../../../index.html" class="page-transition">
                 <div id="go-to-main-page-wrapper">
                 <svg width="15" height="15" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <path d="M0 0H53V53H0V0Z" fill="url(#pattern0)"/>
@@ -78,56 +85,100 @@
                     </svg>                    
                 </div>
             </a>
-            <div id="white-dark-mode-button-wrapper">
-                <label>
-                    <input type="checkbox" id="dark-mode-button" >
-                    <span class="check" ></span>
-                </label>
+
+        </div>
+
+    <!--Sphere pop up-->
+        <div id="sphere-pop-up-background">
+            <div id="sphere-pop-up-wrapper">
+                <p id="close-popUp"  onclick="closePopUp()">+</p>
+                <h4 id="sphere-pop-up-title">Discovery Route</h4>
+                <div id="sphere-wrapper">
+                    <canvas id="canvas"></canvas>
+                </div>
             </div>
         </div>
 
     <!--page content-->
     <div class="main-for-responsive-wrapper"> 
         <main class="main-for-responsive">
-            <div id="first-div-wrapper">
-                <div id="first-text-div-wrapper">
-                    <p class="about-us-text">About us</p>
-                    <h3 class="team-newt">TEAM NEWT</h3>
-                    <p class="main-text">If you were a curious person interested in The greatest geography discoveries and wanted to learn more about them, what would you choose – a boring book or a captivating website? The website, of course. Our website is a place where you can find information about the year, the discoverer and the route of the discoveries. You can see pictures of the events and even a 3D map of their journeys. </p>
+            <div id="starter-div">
+                <img style="width: 1100px; height: 600px; object-fit: cover;" src="https://static.wixstatic.com/media/37d0c7_28225520d0894d1088864f5394c6cbdf~mv2.jpg/v1/fill/w_800,h_530,al_c,q_80,enc_auto/Panagia%20Acheiropoietos%20(Thessaloniki)_jp.jpg" Panagia Acheiropoietos Church" id="first-image">
+                <div id="starter-heading-wrapper">
+                    <h1 style="text-align: center;" id="starter-title">The Church of Panagia Acheiropoietos</h1>
                 </div>
-                <img src="../images/newtLogoInAboutUsPage.png" alt="Newt logo" id="newt-logo-about-us">
+            </div> 
+            <div id="starter-text-wrapper"
+            data-aos="fade"
+            data-aos-offset="200"
+            data-aos-duration="500">
+                <p id="starter-text">
+                  
+The name "Acheiropoietos", which in Greek means "not made by hands", first turns up in a document of 1320 and probably originally referred to an icon of the Virgin supposed to have been miraculously created. It was also supposed to play an important role in the cult of Saint Demetrios, patron saint of Thessaloniki, in processions carried out in his honour.
+                </p>
             </div>
-            <div id="second-div-wrapper">
-                <img src="../images/mockupImageInAboutUs.png" alt="Newt logo" >
-                <div id="second-text-div">
-                    <p class="about-us-text second">About us</p>
-                    <h3 class="team-newt second">TEAM NEWT</h3>
-                    <p class="main-text second">We are team NEWT. Our mission is to show that history and geography are not always boring. They can be very interesting, fascinating and magical. With our website, we do this in a modern way. You can always contact us and let us know what you think. We are always open to new ideas and suggestions for improving our website and information.</p>
+            <img style="width: 1100px; height: 600px; object-fit: cover;display:block;margin: 0 auto;" src="https://www.thessalonikitourism.gr/images/2019/01/31/panagiaacheiropoietos2.png" Image of America" id="secondImage">
+            <div id="native-communities-text-wrapper" data-aos="fade-left"
+            data-aos-offset="300"
+            data-aos-duration="500">
+                <h1 id="native-communities-title">Architectural Features</h1>
+                <p id="native-communities-text">
+                    It is a three-aisled basilica architecturally, having a wooden roof and galleries. It was designed to include a narthex and remnants of an exonarthex on the west side, indicating an atrium, which must have been extended underneath the present Makedonomachon Square.  The nave, about 14.2 meters wide, is flanked by two colonnades, each consisting of twelve columns made of Proconnesian marble. These bear Corinthian capitals with particularly fine carving, typical of the best work of this period.
+
+                </p>
+            </div>
+            <div id="end-page-wrapper">
+                <div id="columbian-exchange-wrapper"
+                data-aos="fade-right"
+                data-aos-offset="300"
+                data-aos-duration="500">
+                    <h1 id="columbian-exchange-title">Interior Decorations</h1>
+                    <p id="columbian-exchange-text">
+                        Inside the church, the arches of the colonnades are decorated with beautiful mosaics: plant and geometrical motifs, animals, and Christian symbols. These testify to the exceptional craftsmanship of the early Christian craftsmen of Thessaloniki.  The south aisle also contains 13th-century frescoes of military saints, part of the depiction of the Forty Martyrs of Sebaste. Historically, it was dedicated to the Virgin Mary, under the title Theotokos, from which it derived its alternative title, the Great Church of the Virgin, until the 14th century.
+                    </p>
                 </div>
-            </div>
-            <footer>
+                <div id="consequences-text-wrapper"
+                data-aos="fade-left"
+                data-aos-offset="300"
+                data-aos-duration="500">
+                    <h1 id="consequences-title">Cultural Significance</h1>
+                    <p id="consequences-text"> 
+                        Today, the Church of Panagia Acheiropoietos is a UNESCO World Heritage Site and boasts probably the most outstanding early Byzantine architecture. Full of rich history and architectural beauty, it captivates visitors and scholars alike to this day for continued understanding of the early Christian past of Thessaloniki and its ever continuum of cultural legacy.
+                    </p>
+                </div>
+     
+                
+                <footer>
                     <div id="footer-content-wrapper">
                         <div id="footer-title-wrapper">
-                            <h3>NEWT</h3>
                         </div>
                         <div id="footer-main-parth">
                             <div id="footer-left-parth">
-                                <p>2022 © NEWT | All rights reserved</p>
+                                <p>2024 © Arav Budhiraja | All rights reserved</p>
                             </div>
                             <div id="footer-mini-nav">
-                                <p id="feedback-popUp">Feedback</p>   
-                                <p>|</p> 
-                                <a href="aboutUs.html"><p>About</p></a>
+                                <a href="citations.html" class="page-transition"><p>Citations</p></a>
                             </div>
                         </div>
                     </div>
-            </footer>
+                </footer>
+                <img src="../images/americaPageEndImage.png" cool background image" id="end-background-image">
+            </div>
         </main>
     </div>
-        
+    
     <script src="../js/cursor.js"></script>
     <script src="../js/dark-mode.js"></script>
     <script src="../js/popUpWindow.js"></script>
+    <script src="../js/sphere.js"></script>
+    </script>
     <script src="../js/pageTransition.js"></script>
+    
+
+    <!--AOS library-->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
 </body>
 </html>

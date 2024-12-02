@@ -4,67 +4,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../images/newtLogo.png">
-    <link rel="stylesheet" href="../css/page/circumnavigation.css">
-    <title>First circumnavigation</title>
+    <link rel="stylesheet" href="../css/page/routeToIndia.css">
+    <title>The Church of Agia Sophia</title>
     <!--For the custom fonts-->
         <link rel="stylesheet" type="text/css" href="../../src/fonts/style.css"/>
         <link rel="stylesheet" type="text/css" href="../../src/fonts/stylesheet2.css"/>
     <!--AOS library-->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--Three.js library-->
+    <style>
+        * {
+  cursor: default !important;
+}
+::selection {
+      color: white !important;
+    }
+
+    </style>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r123/three.min.js"></script>
 </head>
-<body class="secondary-page circumnavigation">
-    <!--Custom cursor-->
-        <div class="cursor">
-            <div class="inner-circle">
+<body class="secondary-page routhToIndia">
+ 
 
-            </div>
-        </div>
-    
     <!--Page transition-->    
         <div class = "transition"></div>
         <div class = "transition two"></div>
         <div class = "transition three"></div>
         <div class = "transition four"></div>
-        <div class = "transition five"></div>
+        <div class = "transition five"></div>    
 
     <!--Feedback pop up window-->
         <div class="popUp-background"></div>
         <div class="popUp-wrapper">
-        <div class="popUp-content">
-            <p id="close-popUp">+</p>
-            <form action="mailto:ZZSpasov20@codingburgas.bg?subject=New feedback" enctype="text/plain" method="post">
-                <div id="first-form-parth">
-                    <div id="first-form-parth-space">
-                        <div id="form-title-wrapper">
-                            <h4 id="form-title">Write us</h4>
-                        </div>
-                        <div id="hr-div-wrapper">
-                            <div id="hr-div"></div>
-                        </div>
-                        <div class="input-and-label-wrapper">
-                            <input type="text" id="name" name="Name" placeholder="&nbsp;" required>
-                            <label for="Name" class="input-label">Name</label>
-                        </div>
-                        <div class="input-and-label-wrapper">
-                            <input type="text" id="last name" name="Last name" placeholder="&nbsp;" required>
-                            <label for="Last name" class="input-label">Last name</label>
-                        </div>
-                        <div class="input-and-label-wrapper">
-                            <input type="text" id="phone-number" name="Phone number" placeholder="&nbsp;" pattern="[0-9\.]+" minlength="7" maxlength="15">
-                            <label for="Phone number" class="input-label">Phone</label>
+            <div class="popUp-content">
+                <p id="close-popUp">+</p>
+                <form action="mailto:ZZSpasov20@codingburgas.bg?subject=New feedback" enctype="text/plain" method="post">
+                    <div id="first-form-parth">
+                        <div id="first-form-parth-space">
+                            <div id="form-title-wrapper">
+                                <h4 id="form-title">Write us</h4>
+                            </div>
+                            <div id="hr-div-wrapper">
+                                <div id="hr-div"></div>
+                            </div>
+                            <div class="input-and-label-wrapper">
+                                <input type="text" id="name" name="Name" placeholder="&nbsp;" required>
+                                <label for="Name" class="input-label">Name</label>
+                            </div>
+                            <div class="input-and-label-wrapper">
+                                <input type="text" id="last name" name="Last name" placeholder="&nbsp;" required>
+                                <label for="Last name" class="input-label">Last name</label>
+                            </div>
+                            <div class="input-and-label-wrapper">
+                                <input type="text" id="phone-number" name="Phone number" placeholder="&nbsp;" pattern="[0-9\.]+" minlength="7" maxlength="15">
+                                <label for="Phone number" class="input-label">Phone</label>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div id="second-form-parth">
-                    <label for="Feedback" id="messageLabel">Message</label>
-                    <textarea name="Feedback" id="textarea"   placeholder="Write text here..." required></textarea>
-                    <input type="submit" value="SEND MESSAGE" id="submit-button">
-                </div>
-            </form>
-        </div>
+                    <div id="second-form-parth">
+                        <label for="Feedback" id="messageLabel">Message</label>
+                        <textarea name="Feedback" id="textarea"   placeholder="Write text here..." required></textarea>
+                        <input type="submit" value="SEND MESSAGE" id="submit-button">
+                    </div>
+                </form>
+            </div>
         </div>    
 
     <!--Mini nav-->
@@ -82,15 +85,9 @@
                     </svg>                    
                 </div>
             </a>
-            <div id="white-dark-mode-button-wrapper">
-                <label>
-                    <input type="checkbox" id="dark-mode-button" >
-                    <span class="check" ></span>
-                </label>
-            </div>
+  
         </div>
 
-    
     <!--Sphere pop up-->
         <div id="sphere-pop-up-background">
             <div id="sphere-pop-up-wrapper">
@@ -106,70 +103,67 @@
     <div class="main-for-responsive-wrapper"> 
         <main class="main-for-responsive">
             <div id="starter-div">
-                <img src="../images/circumnavigationPageFirstImage.png" alt="Image of America" id="first-image">
+                <img style="width: 1100px; height: 600px; object-fit: cover;" src="https://www.greeka.com/seedo/photos/730/thessaloniki-church-of-agia-sofia-top-1-1280.jpg" Image of person" id="first-image">
                 <div id="starter-heading-wrapper">
-                    <h1 id="starter-title">First circumnavigation</h1>
+                    <h1 id="starter-title">The Church of Agia Sophia</h1>
                 </div>
             </div> 
             <div id="starter-text-wrapper"
-            data-aos="fade"
-            data-aos-offset="200"
-            data-aos-duration="500">
-                <p id="starter-text">
-                    One of the most famous Portuguese-born explorers was Fernao de Magalhaes, who instigated and organized the first circumnavigation from 1519 to 1522. Sailing for the King of Spain, he set out to find a route to the Orient, sailing west around the southern tip of South America. 
-                </p>
-                <h5 id="see-routh" onclick="popUp()">See Route <img src="../images/globeIcon.png" alt="globe icon" id="globe-icon"></h5>
+                data-aos="fade"
+                data-aos-offset="200"
+                data-aos-duration="500">
+                    <p id="starter-text">
+                        The current Agia Sophia was built in the 7th century AD to replace the previous five aisled basilica dedicated to Saint Mark that had been previously destroyed in the early 7th century. The earlier basilica was the centerpiece of the place of worship since the 3rd century A.D. Agia Sophia drew inspiration from its namesake in Constantinople, modern-day Istanbul, to represent the architectural and spiritual spirit of the Byzantine Empire.
+                    </p>
             </div>
-            <img src="../images/circumnavigationPageSecondImage.png" alt="Image of America" id="secondImage">
-            <div id="squadron-sailed-text-wrapper" data-aos="fade-left"
-            data-aos-offset="300"
-            data-aos-duration="500">
-                <h1 id="squadron-sailed-title">Squadron sailed from Spain</h1>
-                <p id="squadron-sailed-text">
-                    In 1519, a large squadron sailed from Spain, aiming to find a western sea route to Asia. At the head is the Portuguese Fernando Magellan. His five ships sailed farther south along with South America, discovering La Plata Bay, which was originally considered a strait. With many vicissitudes (even a revolt) in 1520, Magellan crossed a narrow and dangerous strait, named today after him
-                </p>
+            <img style="width: 1100px; height: 600px; object-fit: cover;display:block;margin: 0 auto;" src="https://www.thessalonikitourism.gr/images/2019/01/31/agiasophia2.png" Image of people" id="secondImage">
+            <div id="the-beggining-text-wrapper" data-aos="fade-left"
+                data-aos-offset="300"
+                data-aos-duration="500">
+                    <h1 id="the-beggining-title">Architectural Features</h1>
+                    <p id="the-beggining-text">
+                        Agia Sophia is the representative of the transitional cross-in-square type, developed from the earlier basilica type, being almost square in plan and having a wide dome on barrel vaults of unequal height and length, flanked on each side by a central nave, a narthex, and lateral aisles to form an ambulatory with galleries on three sides. Rebuilt after the earthquakes in the 9th century, the dome includes twelve arched windows to let the interior be bathed with natural light, further enhancing its ethereal atmosphere. This is an innovative combination, underlining the structural integrity of the church along with aesthetic refinement.
+                    </p>
             </div>
             <div id="end-page-wrapper">
-                <div id="in-progress-wrapper"
-                data-aos="fade-right"
-                data-aos-offset="300"
-                data-aos-duration="500">
-                    <h1 id="in-progress-title">In Progress</h1>
-                    <p id="in-progress-text">
-                        "We were all in a good mood again, because we had discovered the strait that many before us had searched in vain," wrote the chronicler Antonio Pigafeta. Magellan then recklessly plunges into the vast expanses of the Pacific Ocean - a time of great suffering for the crew. After more than a hundred days without seeing land, the Spaniards reached the Philippine Islands. The admiral was killed there. All ships except Victoria have been abandoned. In 1522, Victoria returned to Spain laden with spices. Of the 235 sailors, only 18 survive.   
-                    </p>
-                </div>
-                <div id="drake-message-text-wrapper"
-                data-aos="fade-left"
-                data-aos-offset="300"
-                data-aos-duration="500">
-                    <h1 id="drake-message-title">Drake message</h1>
-                    <p id="drake-message-text"> 
-                        This first circumnavigation proves something that everyone already knows - that the Earth is round. It shows how big and almost insurmountable the Pacific Ocean is. It reveals more than any other expedition how dangerous a long stay on the high seas is. However, even before the end of the 16th century, the Englishman Francis Drake made a second round-the-world tour. However, it does not pass through the Strait of Magellan, but further south - through the Strait named after him - Drake. 
-                    </p>
-                </div>
-                <footer>
-                    <div id="footer-content-wrapper">
-                        <div id="footer-title-wrapper">
-                            <h3>NEWT</h3>
-                        </div>
-                        <div id="footer-main-parth">
-                            <div id="footer-left-parth">
-                                <p>2022 © NEWT | All rights reserved</p>
-                            </div>
-                            <div id="footer-mini-nav">
-                                <p id="feedback-popUp">Feedback</p>   
-                                <p>|</p> 
-                                <a href="aboutUs.html" class="page-transition"><p>About</p></a>
-                            </div>
-                        </div>
+                    <div id="only-sailer-wrapper"
+                    data-aos="fade-right"
+                    data-aos-offset="300"
+                    data-aos-duration="500">
+                        <h1 id="only-sailer-title">Interior Decorations</h1>
+                        <p id="only-sailer-text">
+                            Inside, the Agia Sophia has some of the most incredible mosaics that give an insight into the development of the art over centuries. The apse bears the very attractive mosaic of the Virgin Mary with the Christ Child from the 11th or 12th century. The dome is decorated with an astonishing view of the Ascension of Christ, from the late 9th century, with Christ sorrounded by angels and apostles in a celestial scene. The other highly remarkable mosaic in the altar apse-it dates from the Iconoclastic period, about 780-788 A.D.-includes a cross in glory; it means that the Church outlived the quite contentious period in the religious history of Byzantium.
+                        </p>
                     </div>
-                </footer>
-                <img src="../images/curcumnavigationPageEndImage.png" alt="cool background image" id="end-background-image">
+                    <div id="return-to-portugal-text-wrapper"
+                    data-aos="fade-left"
+                    data-aos-offset="300"
+                    data-aos-duration="500">
+                        <h1 id="return-to-portugal-title">Cultural Significance</h1>
+                        <p id="return-to-portugal-text"> 
+                            The Church of Agia Sophia represents an immensity of cultural and spiritual significance, a witness to the rich historical and religious development of Thessaloniki. It has stood the tests of conquests, natural disasters like the 1917 fire and 1978 earthquake, and the tides of political regimes-constantly standing as a resolute symbol of survival and flexibility. It finds a place in the UNESCO List of Paleochristian and Byzantine Monuments of Thessaloniki. Today, it is a place of worship and a historical monument. Agia Sophia is among those places which have drawn or attracted tourists all over the world due to the religious, architectural, and artistic value.
+                        </p>
+                    </div>
+                    <footer>
+                        <div id="footer-content-wrapper">
+                            <div id="footer-title-wrapper">
+                            </div>
+                            <div id="footer-main-parth">
+                                <div id="footer-left-parth">
+                                    <p>2024 © Arav Budhiraja | All rights reserved</p>
+                                </div>
+                                <div id="footer-mini-nav">
+                           
+                                    <a href="citations.html" class="page-transition"><p>Citations</p></a>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                    <img src="../images/routeToIndiaPageEndImage.png" cool background image" id="end-background-image">
             </div>
         </main>
     </div>
-
+    
     <script src="../js/cursor.js"></script>
     <script src="../js/popUpWindow.js"></script>
     <script src="../js/dark-mode.js"></script>

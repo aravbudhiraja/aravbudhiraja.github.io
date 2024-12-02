@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../images/newtLogo.png">
-    <link rel="stylesheet" href="../css/page/southPole.css">
-    <title>South Pole</title>
+    <link rel="stylesheet" href="../css/page/circumnavigation.css">
+    <title>The Church of Hosios David</title>
     <!--For the custom fonts-->
         <link rel="stylesheet" type="text/css" href="../../src/fonts/style.css"/>
         <link rel="stylesheet" type="text/css" href="../../src/fonts/stylesheet2.css"/>
     <!--AOS library-->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--Three.js library-->
+    <style>
+        * {
+  cursor: default !important;
+}
+
+    </style>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r123/three.min.js"></script>
 </head>
-<body class="secondary-page southPole">
+<body class="secondary-page circumnavigation">
     <!--Custom cursor-->
-        <div class="cursor">
-            <div class="inner-circle">
-
-            </div>
-        </div>
-
+   
+    
     <!--Page transition-->    
         <div class = "transition"></div>
         <div class = "transition two"></div>
@@ -33,38 +34,38 @@
     <!--Feedback pop up window-->
         <div class="popUp-background"></div>
         <div class="popUp-wrapper">
-            <div class="popUp-content">
-                <p id="close-popUp">+</p>
-                <form action="mailto:ZZSpasov20@codingburgas.bg?subject=New feedback" enctype="text/plain" method="post">
-                    <div id="first-form-parth">
-                        <div id="first-form-parth-space">
-                            <div id="form-title-wrapper">
-                                <h4 id="form-title">Write us</h4>
-                            </div>
-                            <div id="hr-div-wrapper">
-                                <div id="hr-div"></div>
-                            </div>
-                            <div class="input-and-label-wrapper">
-                                <input type="text" id="name" name="Name" placeholder="&nbsp;" required>
-                                <label for="Name" class="input-label">Name</label>
-                            </div>
-                            <div class="input-and-label-wrapper">
-                                <input type="text" id="last name" name="Last name" placeholder="&nbsp;" required>
-                                <label for="Last name" class="input-label">Last name</label>
-                            </div>
-                            <div class="input-and-label-wrapper">
-                                <input type="text" id="phone-number" name="Phone number" placeholder="&nbsp;" pattern="[0-9\.]+" minlength="7" maxlength="15">
-                                <label for="Phone number" class="input-label">Phone</label>
-                            </div>
+        <div class="popUp-content">
+            <p id="close-popUp">+</p>
+            <form action="mailto:ZZSpasov20@codingburgas.bg?subject=New feedback" enctype="text/plain" method="post">
+                <div id="first-form-parth">
+                    <div id="first-form-parth-space">
+                        <div id="form-title-wrapper">
+                            <h4 id="form-title">Write us</h4>
+                        </div>
+                        <div id="hr-div-wrapper">
+                            <div id="hr-div"></div>
+                        </div>
+                        <div class="input-and-label-wrapper">
+                            <input type="text" id="name" name="Name" placeholder="&nbsp;" required>
+                            <label for="Name" class="input-label">Name</label>
+                        </div>
+                        <div class="input-and-label-wrapper">
+                            <input type="text" id="last name" name="Last name" placeholder="&nbsp;" required>
+                            <label for="Last name" class="input-label">Last name</label>
+                        </div>
+                        <div class="input-and-label-wrapper">
+                            <input type="text" id="phone-number" name="Phone number" placeholder="&nbsp;" pattern="[0-9\.]+" minlength="7" maxlength="15">
+                            <label for="Phone number" class="input-label">Phone</label>
                         </div>
                     </div>
-                    <div id="second-form-parth">
-                        <label for="Feedback" id="messageLabel">Message</label>
-                        <textarea name="Feedback" id="textarea"   placeholder="Write text here..." required></textarea>
-                        <input type="submit" value="SEND MESSAGE" id="submit-button">
-                    </div>
-                </form>
-            </div>
+                </div>
+                <div id="second-form-parth">
+                    <label for="Feedback" id="messageLabel">Message</label>
+                    <textarea name="Feedback" id="textarea"   placeholder="Write text here..." required></textarea>
+                    <input type="submit" value="SEND MESSAGE" id="submit-button">
+                </div>
+            </form>
+        </div>
         </div>    
 
     <!--Mini nav-->
@@ -82,19 +83,13 @@
                     </svg>                    
                 </div>
             </a>
-            <div id="white-dark-mode-button-wrapper">
-                <label>
-                    <input type="checkbox" id="dark-mode-button" >
-                    <span class="check" ></span>
-                </label>
-            </div>
+
         </div>
 
+    
     <!--Sphere pop up-->
         <div id="sphere-pop-up-background">
             <div id="sphere-pop-up-wrapper">
-                <p id="close-popUp"  onclick="closePopUp()">+</p>
-                <h4 id="sphere-pop-up-title">Discovery Route</h4>
                 <div id="sphere-wrapper">
                     <canvas id="canvas"></canvas>
                 </div>
@@ -105,66 +100,63 @@
     <div class="main-for-responsive-wrapper"> 
         <main class="main-for-responsive">
             <div id="starter-div">
-                    <img src="../images/southPolePageFirstImage.png" alt="Image of person" id="first-image">
-                    <div id="starter-heading-wrapper">
-                        <h1 id="starter-title">The South Pole</h1>
-                    </div>
+                <img style="width: 1100px; height: 600px; object-fit: cover;" src="https://upload.wikimedia.org/wikipedia/commons/0/02/Latomou_Monastery_View.jpg" Image of America" id="first-image">
+                <div id="starter-heading-wrapper">
+                    <h1 id="starter-title">The Church of Hosios David</h1>
+                </div>
             </div> 
             <div id="starter-text-wrapper"
-                    data-aos="fade"
-                    data-aos-offset="200"
-                    data-aos-duration="500">
-                        <p id="starter-text">
-                            On December 15, 1911, the South Pole was discovered by Roald Amundsen, "the last of the Vikings." The race to the South Pole was one of the biggest international competitions before the race to the moon and was full of tragedy and triumph. He represents a small, newly independent Norway against the British Empire.  
-                        </p>
-                        <h5 id="see-routh" onclick="popUp()">See Route <img src="../images/globeIcon.png" alt="globe icon" id="globe-icon"></h5>
+            data-aos="fade"
+            data-aos-offset="200"
+            data-aos-duration="500">
+                <p id="starter-text">
+                    According to tradition, the church was founded by Theodora, daughter of Emperor Maximian, who secretly converted to Christianity. She requested her father to build a bathhouse, which she then transformed into a church, adorning it with a mosaic concealed under oxhide and mortar to hide her faith. This mosaic was miraculously revealed in the 9th century, leading to the church's dedication to Christ the Savior of Latomos. After the Ottoman conquest in 1430, the church was converted into a mosque and later reconsecrated as a Christian church in the early 20th century, when it was named Hosios David to honor a revered local ascetic.
+                </p>
             </div>
-            <img src="../images/southPolePageSecondImage.png" alt="Image of people" id="secondImage">
-            <div id="the-discovery-text-wrapper" data-aos="fade-left"
+            <img style="width: 1100px; height: 600px; object-fit: cover;display:block;margin: 0 auto;" src="https://saloniki.guide/photos/a/339/18295053135d0c92127d5036.24070249.jpg" Image of America" id="secondImage">
+            <div id="squadron-sailed-text-wrapper" data-aos="fade-left"
             data-aos-offset="300"
             data-aos-duration="500">
-                <h1 id="the-discovery-title">The Discovery</h1>
-                <p id="the-discovery-text">
-                    The first expedition of its kind to reach the geographical South Pole was led by Norwegian explorer Roald Amundsen. He and four others arrived at the pole on December 14, 1911, five weeks before the British Party led by Robert Falcon Scott as part of the Terra Nova expedition. Amundsen and his team returned safely to their base and later heard that Scott and his four companions had died on the way back.  
+                <h1 id="squadron-sailed-title">Architectural Features</h1>
+                <p id="squadron-sailed-text">
+                    The church's original design features a square plan with a semicircular apse to the east. Inside, a Greek cross is inscribed within the square, creating four corner bays between the cross's arms and the outer walls. The central bay was originally covered by a low dome without windows, while the cross's arms were vaulted, and the corner bays featured cross-vaults. Illumination was provided by two-light windows at the ends of the cross's arms and in the sanctuary apse. Although the western section was during its conversion into a mosque, the remaining structure preserves significant elements of its early Christian architecture.
                 </p>
             </div>
             <div id="end-page-wrapper">
-                <div id="framhiem-base-wrapper"
+                <div id="in-progress-wrapper"
                 data-aos="fade-right"
                 data-aos-offset="300"
                 data-aos-duration="500">
-                    <h1 id="framhiem-base-title">The Framhiem Base</h1>
-                    <p id="framhiem-base-text">
-                        Although little is known about Vasco da Gama's early years, he was certainly a resolute chief and an experienced sailor. All the narratives of the time describe him as a tough, authoritarian, and "terribly violent when angry" man. Vasco da Gama's fleet was the largest and best organized of the Portuguese maritime exploration expeditions. Two of the four ships had been built especially for this mission, under the orders of the experienced Bartolomeu 
+                    <h1 id="in-progress-title">Interior Decorations</h1>
+                    <p id="in-progress-text">
+                        The church is distinguished by its remarkable mosaics and frescoes. The semidome of the sanctuary apse showcases a 5th-century mosaic depicting a Theophany, with a youthful Christ seated on a rainbow, symbolizing heaven, surrounded by the symbols of the four Evangelists and flanked by the prophets Ezekiel and Habakkuk. This composition combines spiritual themes with naturalistic elements, reflecting Hellenistic artistic influences. Additionally, 12th-century frescoes adorn the south vault, illustrating scativity and the Baptism of Christ, notable for their expressive figures and intricate details.
                     </p>
                 </div>
-                <div id="consequences-text-wrapper"
+                <div id="drake-message-text-wrapper"
                 data-aos="fade-left"
                 data-aos-offset="300"
                 data-aos-duration="500">
-                    <h1 id="consequences-title">Consequences </h1>
-                    <p id="consequences-text"> 
-                        The expedition's success was widely applauded, though the story of Scott's heroic failure overshadowed its achievement in the United Kingdom. Amundsen's decision to keep his true plans secret until the last moment was criticized by some. Recent polar historians have more fully recognized the skill and courage of Amundsen's party; the permanent scientific base at the pole bears his name, together with that of Scott.   
-                    </p>
+                    <h1 id="drake-message-title">Cultural Significance</h1>
+                    <p id="drake-message-text"> 
+                        The Church of Hosios David has endured through various historical phases, including periods of religious transformation and natural disasters. Its artistic and architectural features offer valuable insights into early Christian worship and Byzantine aesthetics. Recognized for its cultural importance, it was inscribed on the UNESCO World Heritage List in 1988 as part of the Paleochristian and Byzantine Monuments of Thessaloniki. Today, it stands as a testament to the city's enduring spiritual legacy and attracting visitors and scholars alike.                    </p>
                 </div>
                 <footer>
                     <div id="footer-content-wrapper">
                         <div id="footer-title-wrapper">
-                            <h3>NEWT</h3>
                         </div>
                         <div id="footer-main-parth">
                             <div id="footer-left-parth">
-                                <p>2022 © NEWT | All rights reserved</p>
+                                <p>2024 © Arav Budhiraja | All rights reserved</p>
                             </div>
                             <div id="footer-mini-nav">
                                 <p id="feedback-popUp">Feedback</p>   
                                 <p>|</p> 
-                                <a href="aboutUs.html" class="page-transition"><p>About</p></a>
+                                <a href="citations.html" class="page-transition"><p>About</p></a>
                             </div>
                         </div>
                     </div>
                 </footer>
-                <img src="../images/southPolePageEndImage.png" alt="cool background image" id="end-background-image">
+                <img src="../images/curcumnavigationPageEndImage.png" cool background image" id="end-background-image">
             </div>
         </main>
     </div>
@@ -174,11 +166,11 @@
     <script src="../js/dark-mode.js"></script>
     <script src="../js/sphere.js"></script>
     <script src="../js/pageTransition.js"></script>
-    
+
     <!--AOS library-->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
-                AOS.init();
+            AOS.init();
         </script>
 </body>
 </html>

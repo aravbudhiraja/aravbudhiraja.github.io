@@ -13,9 +13,7 @@ a, p, label, input{
     text-decoration: none;
     color:var(--primaryTCWM);
 }
-::selection {
-    color:var(--accentTCWM);
-}
+
 ::placeholder{
     color:var(--primaryTCWM);
 }

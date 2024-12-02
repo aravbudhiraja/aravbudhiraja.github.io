@@ -7,7 +7,7 @@
 
 *You can access our website by pasting this link into your browser.*
 ```
-https://zypetkova20.github.io/Historical-Geography-Project/
+http://aravbudhiraja.github.io/Historical-Geography-Project/
 ```
 
 ## 🖥 Team Members

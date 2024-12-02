@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../images/newtLogo.png">
-    <link rel="stylesheet" href="../css/page/northPole.css">
-    <title>North Pole</title>
+    <link rel="stylesheet" href="../css/page/aboutUs.css">
+    <title>About us</title>
     <!--For the custom fonts-->
         <link rel="stylesheet" type="text/css" href="../../src/fonts/style.css"/>
         <link rel="stylesheet" type="text/css" href="../../src/fonts/stylesheet2.css"/>
-    <!--AOS library-->
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!--Three.js library-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r123/three.min.js"></script>
+        <style>
+            * {
+      cursor: default !important;
+    }
+    ::selection {
+      color: white !important;
+    }
+    
+        </style>
 </head>
-<body  class="secondary-page northPole">
-    <!--Custom cursor-->
-        <div class="cursor">
-            <div class="inner-circle">
 
-            </div>
-        </div>
+<body class="about-us-page">
+ 
     
     <!--Page transition-->    
         <div class = "transition"></div>
@@ -65,8 +65,8 @@
                     </div>
                 </form>
             </div>
-        </div>    
-
+        </div>     
+        
     <!--Mini nav-->
         <div id="miniNavWrapper">
             <a href="../../index.html" class="page-transition">
@@ -82,104 +82,56 @@
                     </svg>                    
                 </div>
             </a>
-            <div id="white-dark-mode-button-wrapper">
-                <label>
-                    <input type="checkbox" id="dark-mode-button" >
-                    <span class="check" ></span>
-                </label>
-            </div>
-        </div>
 
-
-    <!--Sphere pop up-->
-        <div id="sphere-pop-up-background">
-            <div id="sphere-pop-up-wrapper">
-                <p id="close-popUp"  onclick="closePopUp()">+</p>
-                <h4 id="sphere-pop-up-title">Discovery Route</h4>
-                <div id="sphere-wrapper">
-                    <canvas id="canvas"></canvas>
-                </div>
-            </div>
         </div>
 
     <!--page content-->
     <div class="main-for-responsive-wrapper"> 
         <main class="main-for-responsive">
-            <div id="starter-div">
-                <img src="../images/northPolePageFirstImage.png" alt="Image of America" id="first-image">
-                <div id="starter-heading-wrapper">
-                    <h1 id="starter-title">The North Pole</h1>
+            <div id="first-div-wrapper">
+                <div id="first-text-div-wrapper">
+                    <h3 class="team-newt">Citations</h3>
+                    <p class="main-text">
+                        <a href="https://www.thebyzantinelegacy.com/hagia-sophia-thessaloniki" target="_blank">“Hagia Sophia (Thessaloniki).” The Byzantine Legacy</a><br><br>
+                        <a href="https://www.greeka.com/macedonia/thessaloniki/sightseeing/agia-sofia" target="_blank">“Thessaloniki Agia Sofia Church.” Greekacom</a><br><br>
+                        <a href="https://www.thessalonikitourism.gr/index.php/en/component/k2/item/75-church-of-the-wisdom-of-god-church-of-agia-sophia" target="_blank">Tourism, Thessaloniki. Thessaloniki Tourism - Church of the Wisdom of God (Church of Agia Sophia)</a><br><br>
+                        <a href="https://www.thebyzantinelegacy.com/acheiropoietos" target="_blank">“Church of Panagia Acheiropoietos in Thessaloniki.” The Byzantine Legacy</a><br><br>
+                        <a href="https://www.thessalonikitourism.gr/index.php/en/component/k2/item/78-chruch-of-panagia-acheiropoietos" target="_blank">Tourism, Thessaloniki. Thessaloniki Tourism - Chruch of Panagia Acheiropoietos</a><br><br>
+                        <a href="https://saloniki.guide/en/Attraction-Church_of_Panagia_Acheiropoietos-p359-r189473-Thessaloniki" target="_blank">“Church of Panagia Acheiropoietos | Thessaloniki.” Thessaloniki</a><br><br>
+                        <a href="https://nikana.gr/en/tourist-guide/thessaloniki/what-to-see/6935/hosios-david-hidden-treasure-of-early-christianity" target="_blank">“Hosios David - Hidden Treasure of Early Christianity.” Nikana.gr</a><br><br>
+                        <a href="https://www.thebyzantinelegacy.com/hosios-david" target="_blank">“Church of Hosios David (Thessaloniki).” The Byzantine Legacy</a><br><br>
+                        <a href="https://saloniki.guide/en/Attraction-Osios_David_The_Latomou_Monastery-p339-r189473-Thessaloniki" target="_blank">“Osios David (the Latomou Monastery) | Thessaloniki.” Thessaloniki</a><br><br>
+                        <a href="https://www.thebyzantinelegacy.com/demetrios-thessaloniki" target="_blank">“Church of Hagios Demetrios in Thessaloniki. (n.d.). The Byzantine Legacy.”</a><br><br>
+<a href="https://www.greeka.com/macedonia/thessaloniki/sightseeing/saint-demetrius-church/" target="_blank">“Greekacom. (n.d.). Thessaloniki Church of Agios Dimitrios. Greekacom.”</a><br><br>
+<a href="https://www.thessalonikitourism.gr/index.php/en/component/k2/item/70-church-of-agios-dimitrios" target="_blank">“Tourism, T. (n.d.). Thessaloniki Tourism - Church of Agios Dimitrios.”</a><br><br>
+
+
+
+
+                     </p>
                 </div>
-            </div> 
-            <div id="starter-text-wrapper"
-            data-aos="fade"
-            data-aos-offset="200"
-            data-aos-duration="500">
-                <p id="starter-text">
-                    The North Pole was one of the last remaining laurels of earthly exploration, a prize for which countless explorers from many nations had suffered and died for 300 years. And here was the american explorer Robert E. Peary sending word from Indian Harbour, Labrador, that he had reached the pole in April 1909.    
-                </p>
-                <h5 id="see-routh" onclick="popUp()">See Route <img src="../images/globeIcon.png" alt="globe icon" id="globe-icon"></h5>
             </div>
-            <img src="../images/northPolePageSecondImage.png" alt="Image of America" id="secondImage">
-            <div id="the-begging-text-wrapper" data-aos="fade-left"
-            data-aos-offset="300"
-            data-aos-duration="500">
-                <h1 id="the-begging-title">At the beggining</h1>
-                <p id="the-begging-text">
-                    In 1519, a large squadron sailed from Spain, aiming to find a western sea route to Asia. At the head is the Portuguese Fernando Magellan. His five ships sailed farther south along with South America, discovering La Plata Bay, which was originally considered a strait. With many vicissitudes (even a revolt) in 1520, Magellan crossed a narrow and dangerous strait, named today after him
-                </p>
-            </div>
-            <div id="end-page-wrapper">
-                <div id="ice-crush-wrapper"
-                data-aos="fade-right"
-                data-aos-offset="300"
-                data-aos-duration="500">
-                    <h1 id="ice-crush-title">The ice crush</h1>
-                    <p id="ice-crush-text">
-                        The ice crushed Long's ship, he and half his crew perished, which posed a major problem for future researchers. The Norwegian Fritjof Nansen created the ship Fram, which can survive in these conditions. Thus, in 1895, he passed with one satellite beyond the 86th parallel (450 km from the pole).    
-                    </p>
-                </div>
-                <div id="real-discoverer-text-wrapper"
-                data-aos="fade-left"
-                data-aos-offset="300"
-                data-aos-duration="500">
-                    <h1 id="real-discoverer-title">The real discoverer</h1>
-                    <p id="real-discoverer-text"> 
-                        In September 7, 1909, readers of the New York Times awakened to a stunning front-page headline: "Peary Discovers the North Pole After Eight Trials in 23 Years." The Times story alone would have been astounding. But it wasn't alone. A week earlier, the New York Herald had printed its own front-page headline: "The North Pole is Discovered by Dr. Frederick A. Cook." Cook, an American explorer who had seemingly returned from the dead after more than a year in the Arctic, claimed to have reached the pole in April 1908—a full year before Peary.
-                    </p>
-                </div>
-                <footer>
+      
+            <footer>
                     <div id="footer-content-wrapper">
                         <div id="footer-title-wrapper">
-                            <h3>NEWT</h3>
                         </div>
                         <div id="footer-main-parth">
                             <div id="footer-left-parth">
-                                <p>2022 © NEWT | All rights reserved</p>
+                                <p>2024 © Arav Budhiraja | All rights reserved</p>
                             </div>
                             <div id="footer-mini-nav">
-                                <p id="feedback-popUp">Feedback</p>   
-                                <p>|</p> 
-                                <a href="aboutUs.html" class="page-transition"><p>About</p></a>
+                                <a href="citations.html"><p>Citations</p></a>
                             </div>
                         </div>
                     </div>
-                </footer>
-                <img src="../images/northPolePageEndImage.png" alt="cool background image" id="end-background-image">
-            </div>
+            </footer>
         </main>
     </div>
-
+        
     <script src="../js/cursor.js"></script>
-    <script src="../js/popUpWindow.js"></script>
     <script src="../js/dark-mode.js"></script>
-    <script src="../js/sphere.js"></script>
+    <script src="../js/popUpWindow.js"></script>
     <script src="../js/pageTransition.js"></script>
-
-    <!--AOS library-->
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
 </body>
 </html>
